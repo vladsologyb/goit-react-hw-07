@@ -4,9 +4,9 @@ import SearchBox from './components/searchBox/SearchBox'
 import ContactsList from './components/contactList/ContactList'
 import Error from './components/error/Error'
 import Loader from './components/loader/Loader'
-import { fetchContacts } from "../../redux/contactsOps"
-import { selectLoading } from '../../redux/contactsSlice'
- import { selectError } from '../../redux/contactsSlice'
+import { fetchContacts } from "./redux/contactsOps"
+import { selectLoading } from './redux/contactsSlice'
+ import { selectError } from './redux/contactsSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import './App.css'
