@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import {AddContacts} from "../../redux/contactsOps"
+import {addContact} from "../../redux/contactsOps"
 import { useDispatch } from "react-redux";
 import css from "./ContactForm.module.css"
 
@@ -13,7 +13,7 @@ export default function ContactForm() {
         const dispatch = useDispatch();
 
     const handleSubmit = (values, { resetForm }) => {
-        dispatch(AddContacts(values))
+        dispatch(addContact(values))
         const { name, number } = values;
 
         if (!name || !number) {
@@ -38,7 +38,7 @@ export default function ContactForm() {
             <p className={css.text}>Number</p>
             <Field className={css.field} name="number" type="number" />
             <ErrorMessage name="number" component="span" />
-            <button className={css.btn} type="submit">Add Contacts</button>
+            <button className={css.btn} type="submit">Add Contact</button>
         </Form>
     </Formik>
 }
